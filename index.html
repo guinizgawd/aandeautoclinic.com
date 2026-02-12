@@ -1,493 +1,477 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.3">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A&E Auto Clinic | Mobile Car Wash & Oil Change | Bronx, NY</title>
+  <meta name="description" content="A&E Auto Clinic provides mobile car wash, detailing, and oil changes in Bronx, NY and surrounding areas. Call 914-533-3321 to book." />
+  <meta name="theme-color" content="#0b1220" />
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a33;
+      --muted:#9fb0d0;
+      --text:#eef3ff;
+      --accent:#39d98a;
+      --accent2:#4ea6ff;
+      --border: rgba(255,255,255,.10);
+      --shadow: 0 14px 40px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji"; background: radial-gradient(1100px 600px at 20% 10%, rgba(78,166,255,.18), transparent 60%), radial-gradient(900px 520px at 80% 0%, rgba(57,217,138,.16), transparent 55%), var(--bg); color:var(--text)}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{max-width:var(--max); margin:0 auto; padding: 18px}
+    .nav{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,.72);
+      border-bottom:1px solid var(--border);
+    }
+    .nav-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; padding: 12px 18px; max-width:var(--max); margin:0 auto;
+    }
+    .brand{display:flex; align-items:center; gap:12px; min-width: 220px}
+    .brand svg{width:44px; height:44px}
+    .brand .name{line-height:1.1}
+    .brand .name b{display:block; font-size:15px; letter-spacing:.2px}
+    .brand .name span{display:block; font-size:12px; color:var(--muted)}
+    .menu{display:flex; gap:14px; align-items:center}
+    .menu a{font-size:13px; color:var(--muted)}
+    .menu a:hover{color:var(--text)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding: 12px 14px; border-radius: 999px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      font-weight: 650;
+      box-shadow: none;
+      gap:10px;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+      white-space:nowrap;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.10); border-color: rgba(255,255,255,.18)}
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(57,217,138,.95), rgba(78,166,255,.95));
+      border-color: transparent;
+      color:#081124;
+    }
+    .btn.primary:hover{filter: brightness(1.02); transform: translateY(-1px)}
+    .hero{
+      padding: 34px 0 12px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1.12fr .88fr;
+      gap: 18px;
+      align-items:stretch;
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .hero-left{padding: 22px}
+    .kicker{
+      display:inline-flex; gap:10px; align-items:center;
+      padding: 8px 12px; border-radius: 999px;
+      background: rgba(78,166,255,.12);
+      border: 1px solid rgba(78,166,255,.22);
+      color:#cfe6ff; font-size: 12px; font-weight: 650;
+    }
+    h1{margin:14px 0 10px; font-size: clamp(28px, 4vw, 44px); letter-spacing:-.6px; line-height: 1.05}
+    .sub{color: var(--muted); font-size: 15px; line-height: 1.6; margin: 0 0 16px}
+    .hero-cta{display:flex; flex-wrap:wrap; gap:10px; margin-top: 14px}
+    .mini{
+      display:flex; flex-wrap:wrap; gap:10px; margin-top: 16px
+    }
+    .pill{
+      border:1px solid var(--border);
+      background: rgba(0,0,0,.10);
+      color: var(--muted);
+      padding: 10px 12px;
+      border-radius: 14px;
+      font-size: 12px;
+      display:flex; gap:10px; align-items:flex-start;
+      flex: 1 1 220px;
+      min-width: 210px;
+    }
+    .pill b{color: var(--text)}
+    .hero-right{position:relative}
+    .hero-photo{
+      height:100%;
+      min-height: 320px;
+      background:
+        linear-gradient(180deg, rgba(11,18,32,.15), rgba(11,18,32,.88)),
+        url("https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+    }
+    .badge{
+      position:absolute; left:16px; bottom:16px;
+      background: rgba(8,17,36,.78);
+      border:1px solid var(--border);
+      border-radius: 16px;
+      padding: 12px 12px;
+      display:flex; gap:12px; align-items:center;
+      max-width: calc(100% - 32px);
+    }
+    .badge .dot{width:10px; height:10px; border-radius:999px; background: var(--accent)}
+    .badge .txt{font-size: 12px; color: var(--muted); line-height: 1.35}
+    .section{padding: 22px 0}
+    .section h2{margin:0 0 10px; font-size: 22px}
+    .section p{margin:0 0 14px; color: var(--muted); line-height: 1.65}
+    .services{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+    }
+    .svc{
+      grid-column: span 6;
+      display:grid;
+      grid-template-columns: 1fr;
+      overflow:hidden;
+    }
+    .svc .img{
+      height: 170px;
+      background-size: cover;
+      background-position: center;
+      filter: saturate(1.08);
+    }
+    .svc .body{padding: 14px}
+    .svc h3{margin:0 0 8px; font-size: 16px}
+    .svc ul{margin:0; padding-left: 18px; color: var(--muted); font-size: 13px; line-height: 1.55}
+    .svc small{color: var(--muted)}
+    .two-col{
+      display:grid; grid-template-columns: 1fr 1fr; gap: 14px;
+    }
+    .list{
+      padding: 16px;
+    }
+    .list .row{
+      display:flex; justify-content:space-between; gap:12px;
+      padding: 10px 0; border-top: 1px solid var(--border);
+      color: var(--muted); font-size: 13px;
+    }
+    .list .row:first-child{border-top:0; padding-top:0}
+    .list .row b{color: var(--text); font-weight: 650}
+    .form{
+      padding: 16px;
+    }
+    label{display:block; font-size: 12px; color: var(--muted); margin: 10px 0 6px}
+    input, textarea, select{
+      width:100%;
+      padding: 12px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,.16);
+      color: var(--text);
+      outline:none;
+    }
+    textarea{min-height: 92px; resize: vertical}
+    .form .actions{display:flex; gap:10px; flex-wrap:wrap; margin-top: 12px}
+    .fine{font-size:12px; color: var(--muted); margin-top: 10px; line-height: 1.5}
+    .area{
+      display:grid; grid-template-columns: 1fr 1fr; gap: 14px;
+    }
+    .map{
+      min-height: 320px;
+      border-radius: var(--radius);
+      overflow:hidden;
+      border: 1px solid var(--border);
+    }
+    footer{
+      padding: 26px 0 40px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      margin-top: 18px;
+    }
+    .foot{
+      display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
+      align-items:center;
+    }
+    .foot small{line-height: 1.6}
+    .hide-desktop{display:none}
+
+    @media (max-width: 860px){
+      .grid{grid-template-columns: 1fr}
+      .hero-photo{min-height: 280px}
+      .svc{grid-column: span 12}
+      .two-col{grid-template-columns: 1fr}
+      .area{grid-template-columns: 1fr}
+      .menu a{display:none}
+      .hide-desktop{display:inline-flex}
+    }
   </style>
 </head>
+
 <body>
-<p class="p1">&lt;!doctype html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;A&amp;E Auto Clinic | Mobile Car Wash &amp; Oil Change | Bronx, NY&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="description" content="A&amp;E Auto Clinic provides mobile car wash, detailing, and oil changes in Bronx, NY and surrounding areas. Call 914-533-3321 to book." /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="theme-color" content="#0b1220" /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>:root{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--bg:#0b1220;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--card:#0f1a33;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--muted:#9fb0d0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--text:#eef3ff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--accent:#39d98a;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--accent2:#4ea6ff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--border: rgba(255,255,255,.10);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--shadow: 0 14px 40px rgba(0,0,0,.35);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--radius: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--max: 1120px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>*{box-sizing:border-box}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>html,body{margin:0;padding:0;font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji"; background: radial-gradient(1100px 600px at 20% 10%, rgba(78,166,255,.18), transparent 60%), radial-gradient(900px 520px at 80% 0%, rgba(57,217,138,.16), transparent 55%), var(--bg); color:var(--text)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>a{color:inherit;text-decoration:none}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>img{max-width:100%;display:block}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.wrap{max-width:var(--max); margin:0 auto; padding: 18px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position:sticky; top:0; z-index:50;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>backdrop-filter: blur(10px);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(11,18,32,.72);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-bottom:1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.nav-inner{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:flex; align-items:center; justify-content:space-between;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap:12px; padding: 12px 18px; max-width:var(--max); margin:0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.brand{display:flex; align-items:center; gap:12px; min-width: 220px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.brand svg{width:44px; height:44px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.brand .name{line-height:1.1}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.brand .name b{display:block; font-size:15px; letter-spacing:.2px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.brand .name span{display:block; font-size:12px; color:var(--muted)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.menu{display:flex; gap:14px; align-items:center}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.menu a{font-size:13px; color:var(--muted)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.menu a:hover{color:var(--text)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:inline-flex; align-items:center; justify-content:center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 12px 14px; border-radius: 999px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(255,255,255,.06);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--text);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 650;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap:10px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition: transform .12s ease, background .12s ease, border-color .12s ease;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>white-space:nowrap;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.10); border-color: rgba(255,255,255,.18)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn.primary{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, rgba(57,217,138,.95), rgba(78,166,255,.95));</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-color: transparent;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color:#081124;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn.primary:hover{filter: brightness(1.02); transform: translateY(-1px)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 34px 0 12px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.grid{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:grid;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: 1.12fr .88fr;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items:stretch;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.card{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: var(--shadow);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>overflow:hidden;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-left{padding: 22px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.kicker{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:inline-flex; gap:10px; align-items:center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 8px 12px; border-radius: 999px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(78,166,255,.12);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(78,166,255,.22);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color:#cfe6ff; font-size: 12px; font-weight: 650;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>h1{margin:14px 0 10px; font-size: clamp(28px, 4vw, 44px); letter-spacing:-.6px; line-height: 1.05}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.sub{color: var(--muted); font-size: 15px; line-height: 1.6; margin: 0 0 16px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-cta{display:flex; flex-wrap:wrap; gap:10px; margin-top: 14px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.mini{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:flex; flex-wrap:wrap; gap:10px; margin-top: 16px</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.pill{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(0,0,0,.10);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 10px 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:flex; gap:10px; align-items:flex-start;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex: 1 1 220px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>min-width: 210px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.pill b{color: var(--text)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-right{position:relative}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hero-photo{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>height:100%;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>min-height: 320px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background:</p>
-<p class="p1"><span class="Apple-converted-space">        </span>linear-gradient(180deg, rgba(11,18,32,.15), rgba(11,18,32,.88)),</p>
-<p class="p1"><span class="Apple-converted-space">        </span>url("https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&amp;fit=crop&amp;w=1600&amp;q=80");</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-size: cover;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-position: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.badge{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position:absolute; left:16px; bottom:16px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(8,17,36,.78);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 12px 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:flex; gap:12px; align-items:center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: calc(100% - 32px);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.badge .dot{width:10px; height:10px; border-radius:999px; background: var(--accent)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.badge .txt{font-size: 12px; color: var(--muted); line-height: 1.35}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.section{padding: 22px 0}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.section h2{margin:0 0 10px; font-size: 22px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.section p{margin:0 0 14px; color: var(--muted); line-height: 1.65}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.services{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:grid;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: repeat(12, 1fr);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.svc{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>grid-column: span 6;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:grid;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: 1fr;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>overflow:hidden;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.svc .img{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>height: 170px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-size: cover;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-position: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>filter: saturate(1.08);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.svc .body{padding: 14px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.svc h3{margin:0 0 8px; font-size: 16px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.svc ul{margin:0; padding-left: 18px; color: var(--muted); font-size: 13px; line-height: 1.55}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.svc small{color: var(--muted)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.two-col{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:grid; grid-template-columns: 1fr 1fr; gap: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.list{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.list .row{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:flex; justify-content:space-between; gap:12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 10px 0; border-top: 1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted); font-size: 13px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.list .row:first-child{border-top:0; padding-top:0}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.list .row b{color: var(--text); font-weight: 650}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.form{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>label{display:block; font-size: 12px; color: var(--muted); margin: 10px 0 6px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>input, textarea, select{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width:100%;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 12px 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(0,0,0,.16);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--text);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>outline:none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>textarea{min-height: 92px; resize: vertical}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.form .actions{display:flex; gap:10px; flex-wrap:wrap; margin-top: 12px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.fine{font-size:12px; color: var(--muted); margin-top: 10px; line-height: 1.5}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.area{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:grid; grid-template-columns: 1fr 1fr; gap: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.map{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>min-height: 320px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>overflow:hidden;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>footer{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 26px 0 40px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-top: 1px solid var(--border);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.foot{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items:center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.foot small{line-height: 1.6}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.hide-desktop{display:none}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 860px){</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.grid{grid-template-columns: 1fr}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.hero-photo{min-height: 280px}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.svc{grid-column: span 12}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.two-col{grid-template-columns: 1fr}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.area{grid-template-columns: 1fr}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.menu a{display:none}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.hide-desktop{display:inline-flex}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- NAV --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="nav"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="nav-inner"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a class="brand" href="#top" aria-label="A&amp;E Auto Clinic Home"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Simple Logo (SVG) --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;svg viewBox="0 0 64 64" role="img" aria-label="A&amp;E Auto Clinic logo"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;defs&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;linearGradient id="g" x1="0" y1="0" x2="1" y2="1"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;stop offset="0" stop-color="#39d98a"/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;stop offset="1" stop-color="#4ea6ff"/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/linearGradient&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/defs&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;rect x="6" y="6" width="52" height="52" rx="14" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.16)"/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;path d="M18 39c6-14 10-18 14-18s8 4 14 18" fill="none" stroke="url(#g)" stroke-width="4" stroke-linecap="round"/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;path d="M21 39h22" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="3" stroke-linecap="round"/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;circle cx="22" cy="43" r="3" fill="url(#g)"/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;circle cx="42" cy="43" r="3" fill="url(#g)"/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;text x="32" y="22" text-anchor="middle" font-size="10" fill="#eef3ff" font-weight="700"&gt;A&amp;amp;E&lt;/text&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/svg&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="name"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;b&gt;A&amp;amp;E Auto Clinic&lt;/b&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Mobile Car Wash &amp;amp; Oil Change • Bronx, NY&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="menu"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#services"&gt;Services&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#pricing"&gt;Popular Packages&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#area"&gt;Service Area&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#book"&gt;Book&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a class="btn primary" href="tel:9145333321"&gt;Call 914-533-3321&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a class="btn hide-desktop" href="#book"&gt;Book Now&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- HERO --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;main id="top" class="wrap"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="hero"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="grid"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card hero-left"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="kicker"&gt;✅ We come to you • Same-day slots when available&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h1&gt;Mobile Car Wash &amp;amp; Oil Change&lt;br/&gt;in the Bronx and Nearby Areas&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="sub"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>A&amp;amp;E Auto Clinic brings professional detailing and fast oil changes right to your home, job, or driveway.</p>
-<p class="p1"><span class="Apple-converted-space">            </span>Clean car. Fresh oil. Zero hassle.</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="hero-cta"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a class="btn primary" href="tel:9145333321"&gt;Call Now: 914-533-3321&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a class="btn" href="#book"&gt;Get a Quote / Book&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a class="btn" href="#services"&gt;View Services&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="mini"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="pill"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div&gt;🚗&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div&gt;&lt;b&gt;Mobile Service&lt;/b&gt;&lt;br/&gt;We bring water, tools, and supplies.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="pill"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div&gt;🛢️&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div&gt;&lt;b&gt;Oil Change&lt;/b&gt;&lt;br/&gt;Quick, clean, and reliable.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="pill"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div&gt;✨&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div&gt;&lt;b&gt;Detailing&lt;/b&gt;&lt;br/&gt;Interior + exterior, done right.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card hero-right"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="hero-photo" aria-label="Mobile detailing service photo"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="badge"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="dot" aria-hidden="true"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="txt"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;b style="color: var(--text);"&gt;Serving Bronx, NY + surrounding areas&lt;/b&gt;&lt;br/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>Tap to call: &lt;a href="tel:9145333321" style="color:#cfe6ff; text-decoration:underline;"&gt;914-533-3321&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- SERVICES --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="services" class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Services&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;Pick what you need — we’ll confirm your location, vehicle type, and preferred time by phone or text.&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="services"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;article class="card svc"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="img" style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&amp;fit=crop&amp;w=1600&amp;q=80');"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="body"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Mobile Car Wash&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;li&gt;Foam wash + hand dry&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;li&gt;Rims &amp;amp; tires cleaned&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;li&gt;Windows inside/out&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;li&gt;Quick wipe-down &amp;amp; shine&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/article&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;article class="card svc"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="img" style="background-image:url('https://images.unsplash.com/photo-1613214149922-f1809c99b414?auto=format&amp;fit=crop&amp;w=1600&amp;q=80');"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="body"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Oil Change (Mobile)&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;li&gt;Oil &amp;amp; filter replacement&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;li&gt;Top-off key fluids (as needed)&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;li&gt;Clean service, no mess&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;li&gt;Service reminder sticker&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;small&gt;*Oil type/price varies by vehicle.&lt;/small&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/article&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;article class="card svc"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="img" style="background-image:url('https://images.unsplash.com/photo-1616429893425-40fdb3d1a74f?auto=format&amp;fit=crop&amp;w=1600&amp;q=80');"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="body"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Interior Detailing&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;li&gt;Vacuum seats &amp;amp; carpets&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;li&gt;Dashboard/trim cleaning&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;li&gt;Door jamb wipe-down&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;li&gt;Odor freshen (optional)&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/article&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;article class="card svc"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="img" style="background-image:url('https://images.unsplash.com/photo-1597008641621-cefdcf718d05?auto=format&amp;fit=crop&amp;w=1600&amp;q=80');"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="body"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Full Detail Package&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;li&gt;Exterior wash + spray sealant&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;li&gt;Interior deep clean&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;li&gt;Tire shine + trim dressing&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;li&gt;Before/after photos (on request)&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/article&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- PRICING / PACKAGES --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="pricing" class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Popular Packages&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;These are common starting points. Final pricing depends on vehicle size/condition and travel distance.&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="two-col"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card list"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="row"&gt;&lt;b&gt;Quick Wash&lt;/b&gt; &lt;span&gt;Starting at $—&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="row"&gt;&lt;b&gt;Wash + Interior Vacuum&lt;/b&gt; &lt;span&gt;Starting at $—&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="row"&gt;&lt;b&gt;Full Detail&lt;/b&gt; &lt;span&gt;Starting at $—&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="row"&gt;&lt;b&gt;Oil Change&lt;/b&gt; &lt;span&gt;Starting at $—&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="row"&gt;&lt;b&gt;Wash + Oil Change&lt;/b&gt; &lt;span&gt;Bundle savings&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="fine"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>Tip: If you tell us your vehicle year/make/model and your location, we can quote fast.</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a class="btn primary" href="tel:9145333321"&gt;Call for a Quote&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card form" id="book"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h2 style="margin:0 0 6px;"&gt;Book / Get a Quote&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p style="margin:0 0 12px; color: var(--muted);"&gt;Fill this out and we’ll reach out ASAP.&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;!-- This form uses "mailto:" by default (works anywhere). If you have a backend later, replace action="" --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;form action="mailto:aeautoclinic@example.com" method="post" enctype="text/plain"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="name"&gt;Name&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;input id="name" name="Name" placeholder="Your name" required /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="phone"&gt;Phone&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;input id="phone" name="Phone" placeholder="(914) 533-3321" required /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="service"&gt;Service Needed&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;select id="service" name="Service"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;option&gt;Mobile Car Wash&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;option&gt;Interior Detailing&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;option&gt;Oil Change&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;option&gt;Full Detail Package&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;option&gt;Wash + Oil Change&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/select&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="location"&gt;Service Address / Area&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;input id="location" name="Location" placeholder="Bronx, Yonkers, Mount Vernon, etc." /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="vehicle"&gt;Vehicle (Year/Make/Model)&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;input id="vehicle" name="Vehicle" placeholder="e.g., 2018 Honda Accord" /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="notes"&gt;Notes&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;textarea id="notes" name="Notes" placeholder="Preferred day/time, vehicle condition, special requests…"&gt;&lt;/textarea&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="actions"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;button class="btn primary" type="submit"&gt;Send Request&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;a class="btn" href="tel:9145333321"&gt;Or Call 914-533-3321&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="fine"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>If the email button doesn’t open on your device, just call or text:</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;a href="tel:9145333321" style="text-decoration:underline; color:#cfe6ff;"&gt;914-533-3321&lt;/a&gt;.</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/form&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- SERVICE AREA --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="area" class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Service Area&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;Bronx, NY and surrounding areas. If you’re nearby, call and we’ll confirm availability.&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="area"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card list"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="row"&gt;&lt;b&gt;Primary&lt;/b&gt; &lt;span&gt;Bronx, NY&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="row"&gt;&lt;b&gt;Nearby&lt;/b&gt; &lt;span&gt;Manhattan • Yonkers • Mount Vernon&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="row"&gt;&lt;b&gt;Also&lt;/b&gt; &lt;span&gt;New Rochelle • Pelham • Queens (select areas)&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="row"&gt;&lt;b&gt;Hours&lt;/b&gt; &lt;span&gt;Flexible • By appointment&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="fine"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>Want same-day? Call early and we’ll try to fit you in.</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a class="btn primary" href="tel:9145333321"&gt;Call: 914-533-3321&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="map card" aria-label="Map of Bronx, New York"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;!-- Simple map embed (works without API keys). You can replace the query anytime. --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;iframe</p>
-<p class="p1"><span class="Apple-converted-space">            </span>title="A&amp;E Auto Clinic Service Area Map"</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width="100%"</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height="100%"</p>
-<p class="p1"><span class="Apple-converted-space">            </span>style="border:0"</p>
-<p class="p1"><span class="Apple-converted-space">            </span>loading="lazy"</p>
-<p class="p1"><span class="Apple-converted-space">            </span>referrerpolicy="no-referrer-when-downgrade"</p>
-<p class="p1"><span class="Apple-converted-space">            </span>src="https://www.google.com/maps?q=Bronx%2C%20NY&amp;output=embed"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/iframe&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- FOOTER --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="wrap foot" style="padding:0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;small&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;b style="color:var(--text)"&gt;A&amp;amp;E Auto Clinic&lt;/b&gt;&lt;br/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>Mobile Car Wash &amp;amp; Oil Change • Bronx, NY&lt;br/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>Phone: &lt;a href="tel:9145333321" style="text-decoration:underline; color:#cfe6ff;"&gt;914-533-3321&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/small&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;small&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>© &lt;span id="year"&gt;&lt;/span&gt; A&amp;amp;E Auto Clinic. All rights reserved.</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/small&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/main&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("year").textContent = new Date().getFullYear();</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+  <!-- NAV -->
+  <div class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="A&E Auto Clinic Home">
+        <!-- Simple Logo (SVG) -->
+        <svg viewBox="0 0 64 64" role="img" aria-label="A&E Auto Clinic logo">
+          <defs>
+            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#39d98a"/>
+              <stop offset="1" stop-color="#4ea6ff"/>
+            </linearGradient>
+          </defs>
+          <rect x="6" y="6" width="52" height="52" rx="14" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.16)"/>
+          <path d="M18 39c6-14 10-18 14-18s8 4 14 18" fill="none" stroke="url(#g)" stroke-width="4" stroke-linecap="round"/>
+          <path d="M21 39h22" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="22" cy="43" r="3" fill="url(#g)"/>
+          <circle cx="42" cy="43" r="3" fill="url(#g)"/>
+          <text x="32" y="22" text-anchor="middle" font-size="10" fill="#eef3ff" font-weight="700">A&amp;E</text>
+        </svg>
+
+        <div class="name">
+          <b>A&amp;E Auto Clinic</b>
+          <span>Mobile Car Wash &amp; Oil Change • Bronx, NY</span>
+        </div>
+      </a>
+
+      <div class="menu">
+        <a href="#services">Services</a>
+        <a href="#pricing">Popular Packages</a>
+        <a href="#area">Service Area</a>
+        <a href="#book">Book</a>
+        <a class="btn primary" href="tel:9145333321">Call 914-533-3321</a>
+        <a class="btn hide-desktop" href="#book">Book Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <main id="top" class="wrap">
+    <section class="hero">
+      <div class="grid">
+        <div class="card hero-left">
+          <div class="kicker">✅ We come to you • Same-day slots when available</div>
+          <h1>Mobile Car Wash &amp; Oil Change<br/>in the Bronx and Nearby Areas</h1>
+          <p class="sub">
+            A&amp;E Auto Clinic brings professional detailing and fast oil changes right to your home, job, or driveway.
+            Clean car. Fresh oil. Zero hassle.
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn primary" href="tel:9145333321">Call Now: 914-533-3321</a>
+            <a class="btn" href="#book">Get a Quote / Book</a>
+            <a class="btn" href="#services">View Services</a>
+          </div>
+
+          <div class="mini">
+            <div class="pill">
+              <div>🚗</div>
+              <div><b>Mobile Service</b><br/>We bring water, tools, and supplies.</div>
+            </div>
+            <div class="pill">
+              <div>🛢️</div>
+              <div><b>Oil Change</b><br/>Quick, clean, and reliable.</div>
+            </div>
+            <div class="pill">
+              <div>✨</div>
+              <div><b>Detailing</b><br/>Interior + exterior, done right.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card hero-right">
+          <div class="hero-photo" aria-label="Mobile detailing service photo"></div>
+          <div class="badge">
+            <div class="dot" aria-hidden="true"></div>
+            <div class="txt">
+              <b style="color: var(--text);">Serving Bronx, NY + surrounding areas</b><br/>
+              Tap to call: <a href="tel:9145333321" style="color:#cfe6ff; text-decoration:underline;">914-533-3321</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <h2>Services</h2>
+      <p>Pick what you need — we’ll confirm your location, vehicle type, and preferred time by phone or text.</p>
+
+      <div class="services">
+        <article class="card svc">
+          <div class="img" style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80');"></div>
+          <div class="body">
+            <h3>Mobile Car Wash</h3>
+            <ul>
+              <li>Foam wash + hand dry</li>
+              <li>Rims &amp; tires cleaned</li>
+              <li>Windows inside/out</li>
+              <li>Quick wipe-down &amp; shine</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card svc">
+          <div class="img" style="background-image:url('https://images.unsplash.com/photo-1613214149922-f1809c99b414?auto=format&fit=crop&w=1600&q=80');"></div>
+          <div class="body">
+            <h3>Oil Change (Mobile)</h3>
+            <ul>
+              <li>Oil &amp; filter replacement</li>
+              <li>Top-off key fluids (as needed)</li>
+              <li>Clean service, no mess</li>
+              <li>Service reminder sticker</li>
+            </ul>
+            <small>*Oil type/price varies by vehicle.</small>
+          </div>
+        </article>
+
+        <article class="card svc">
+          <div class="img" style="background-image:url('https://images.unsplash.com/photo-1616429893425-40fdb3d1a74f?auto=format&fit=crop&w=1600&q=80');"></div>
+          <div class="body">
+            <h3>Interior Detailing</h3>
+            <ul>
+              <li>Vacuum seats &amp; carpets</li>
+              <li>Dashboard/trim cleaning</li>
+              <li>Door jamb wipe-down</li>
+              <li>Odor freshen (optional)</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card svc">
+          <div class="img" style="background-image:url('https://images.unsplash.com/photo-1597008641621-cefdcf718d05?auto=format&fit=crop&w=1600&q=80');"></div>
+          <div class="body">
+            <h3>Full Detail Package</h3>
+            <ul>
+              <li>Exterior wash + spray sealant</li>
+              <li>Interior deep clean</li>
+              <li>Tire shine + trim dressing</li>
+              <li>Before/after photos (on request)</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRICING / PACKAGES -->
+    <section id="pricing" class="section">
+      <h2>Popular Packages</h2>
+      <p>These are common starting points. Final pricing depends on vehicle size/condition and travel distance.</p>
+
+      <div class="two-col">
+        <div class="card list">
+          <div class="row"><b>Quick Wash</b> <span>Starting at $—</span></div>
+          <div class="row"><b>Wash + Interior Vacuum</b> <span>Starting at $—</span></div>
+          <div class="row"><b>Full Detail</b> <span>Starting at $—</span></div>
+          <div class="row"><b>Oil Change</b> <span>Starting at $—</span></div>
+          <div class="row"><b>Wash + Oil Change</b> <span>Bundle savings</span></div>
+
+          <p class="fine">
+            Tip: If you tell us your vehicle year/make/model and your location, we can quote fast.
+          </p>
+          <a class="btn primary" href="tel:9145333321">Call for a Quote</a>
+        </div>
+
+        <div class="card form" id="book">
+          <h2 style="margin:0 0 6px;">Book / Get a Quote</h2>
+          <p style="margin:0 0 12px; color: var(--muted);">Fill this out and we’ll reach out ASAP.</p>
+
+          <!-- This form uses "mailto:" by default (works anywhere). If you have a backend later, replace action="" -->
+          <form action="mailto:aeautoclinic@example.com" method="post" enctype="text/plain">
+            <label for="name">Name</label>
+            <input id="name" name="Name" placeholder="Your name" required />
+
+            <label for="phone">Phone</label>
+            <input id="phone" name="Phone" placeholder="(914) 533-3321" required />
+
+            <label for="service">Service Needed</label>
+            <select id="service" name="Service">
+              <option>Mobile Car Wash</option>
+              <option>Interior Detailing</option>
+              <option>Oil Change</option>
+              <option>Full Detail Package</option>
+              <option>Wash + Oil Change</option>
+            </select>
+
+            <label for="location">Service Address / Area</label>
+            <input id="location" name="Location" placeholder="Bronx, Yonkers, Mount Vernon, etc." />
+
+            <label for="vehicle">Vehicle (Year/Make/Model)</label>
+            <input id="vehicle" name="Vehicle" placeholder="e.g., 2018 Honda Accord" />
+
+            <label for="notes">Notes</label>
+            <textarea id="notes" name="Notes" placeholder="Preferred day/time, vehicle condition, special requests…"></textarea>
+
+            <div class="actions">
+              <button class="btn primary" type="submit">Send Request</button>
+              <a class="btn" href="tel:9145333321">Or Call 914-533-3321</a>
+            </div>
+
+            <div class="fine">
+              If the email button doesn’t open on your device, just call or text:
+              <a href="tel:9145333321" style="text-decoration:underline; color:#cfe6ff;">914-533-3321</a>.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE AREA -->
+    <section id="area" class="section">
+      <h2>Service Area</h2>
+      <p>Bronx, NY and surrounding areas. If you’re nearby, call and we’ll confirm availability.</p>
+
+      <div class="area">
+        <div class="card list">
+          <div class="row"><b>Primary</b> <span>Bronx, NY</span></div>
+          <div class="row"><b>Nearby</b> <span>Manhattan • Yonkers • Mount Vernon</span></div>
+          <div class="row"><b>Also</b> <span>New Rochelle • Pelham • Queens (select areas)</span></div>
+          <div class="row"><b>Hours</b> <span>Flexible • By appointment</span></div>
+
+          <p class="fine">
+            Want same-day? Call early and we’ll try to fit you in.
+          </p>
+          <a class="btn primary" href="tel:9145333321">Call: 914-533-3321</a>
+        </div>
+
+        <div class="map card" aria-label="Map of Bronx, New York">
+          <!-- Simple map embed (works without API keys). You can replace the query anytime. -->
+          <iframe
+            title="A&E Auto Clinic Service Area Map"
+            width="100%"
+            height="100%"
+            style="border:0"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Bronx%2C%20NY&output=embed">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="wrap foot" style="padding:0">
+        <small>
+          <b style="color:var(--text)">A&amp;E Auto Clinic</b><br/>
+          Mobile Car Wash &amp; Oil Change • Bronx, NY<br/>
+          Phone: <a href="tel:9145333321" style="text-decoration:underline; color:#cfe6ff;">914-533-3321</a>
+        </small>
+
+        <small>
+          © <span id="year"></span> A&amp;E Auto Clinic. All rights reserved.
+        </small>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
